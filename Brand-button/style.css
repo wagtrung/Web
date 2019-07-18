@@ -1,0 +1,243 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat",sans-serif;
+   
+  
+  }
+
+  
+.conten1{
+    position: relative;
+    height: 650px;
+    background: url(bgg.png);
+    background-size: cover;
+    
+   
+  }
+  .cover{
+    position: absolute;
+    background:black;
+    width:100%;
+    height:100%;
+    opacity: .8;
+  }
+  .button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+    text-align: center;
+    max-width: 1200px;
+   
+  
+
+  
+    
+  }
+  .forh{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    margin:40px;
+    
+  
+  }
+  .forh:before, .forh:after{
+    content: "";
+    top:0;left:0;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    filter: blur(40px);
+    opacity:0;
+    transition: all .3s ease-out ;
+   
+  
+  
+  }
+  .forh:after{
+    
+    top:0;left:0;
+    filter: blur(50px);
+   
+  }
+  
+  
+  .forh:hover:before, .forh:hover:after{
+    transform: translate(0px,-20px);
+    opacity:1;
+  
+  }
+  
+  .forh:nth-child(1):before,
+  .forh:nth-child(1):after,
+  .forh:nth-child(1) .o:before
+  {
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+  }
+  
+  .forh:nth-child(2):before,
+  .forh:nth-child(2):after,
+  .forh:nth-child(2) .o:before
+  {
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+  }
+  .forh:nth-child(3):before,
+  .forh:nth-child(3):after,
+  .conten1 > div > div:nth-child(3) a:before
+  {
+    background: linear-gradient(90deg, #da44ff 0%, #ff0f0f 100%);
+  }
+  
+  .forh:nth-child(4):before,
+  .forh:nth-child(4):after,
+  .forh:nth-child(4) .o:before
+  {
+  background: linear-gradient(45deg,#0bf0c9,#71e619);
+  }
+  .forh:nth-child(5):before,
+  .forh:nth-child(5):after,
+  .forh:nth-child(5) .o:before
+  {
+    background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+  }
+
+  .forh:nth-child(6):before,
+  .forh:nth-child(6):after,
+  .forh:nth-child(6) .o:before
+  {
+  background: linear-gradient(45deg,#f0c20b,#e64a19);
+  }
+  .brand{
+    width:100%;
+    min-height: 114px;
+    position: relative;
+    z-index:99;
+    
+  }
+  .brand img{
+    position: relative;
+    width:50px;
+    height:50px;
+    display: block;
+    margin:0 auto;
+    top:30px;
+    left: -90px;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s;
+  }
+  .brand p{
+    position: relative;
+    
+   top:-40px;
+   left:10px;
+    text-align:center;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:30px;
+    opacity:1;
+    transition: all 0.2s cubic-bezier(0.68, -0.95, 0.265, 1.55);
+  }
+
+  .brand:hover p{
+    opacity:0;
+    left:-20px;
+  }
+  .brand:hover img{
+    width:100px;
+    height:100px;
+   
+    top:0px;
+    left: 0px;
+
+  }
+  
+  .o{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: rgb(255, 255, 255);
+ 
+  border-radius: 100%;
+  box-shadow: 0 1px 1px rgba(97,108,121,.1), 0 7px 18px 0 rgba(97,108,121,.13);
+  transition: box-shadow .2s ease;
+  transition: all 0.4s linear ;
+  z-index: 1;
+  }
+  
+  
+  .forh:hover .o {
+    box-shadow: none;
+    
+    transform: translate(0px,-19px);
+   
+    
+   
+  }
+  
+  .o i{
+    color: #181818;
+    font-size: 26px;
+    line-height: 90px;
+    transition: all 0.3s linear;
+    z-index: 99;
+  }
+  .o:hover i{
+    
+    transform:scale(1.2) ;
+    color:rgb(255, 255, 255);
+  }
+  
+  
+  
+  
+  .o:before{
+   
+    content: "";
+    position: absolute;
+    width:129%;
+    height:129%;
+    background: #5aa8f1;
+    transform: rotate(45deg);
+    left:-110%;
+    top:90%;
+  }
+  .o:hover:before{
+    animation: aaa 0.8s  ;
+    top:-13%;
+    left:-14%;
+  }
+  @keyframes aaa{
+    0%{
+      left:-110%;top:90%;
+  
+    }
+    50% {left:10%; top:-50%;}
+    
+    100%{top:-10%;left:-14%;}
+  }
+  
+ 
+   
+  }
+  @media screen and (max-width: 1000px) {
+    
+  
+    .button{
+      max-width: 50%;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    
+  
+    .button{
+      max-width: 100%;
+    }
+  }
